@@ -19,8 +19,13 @@ Current deployment state:
 - **Resource Governance**: Automated resource management in Australia East region to optimize compliance and visibility.
 - **Network Security Group (NSG)**: Controls inbound/outbound traffic to enforce Zero Trust security model.
 
-
 ## Enterprise Architecture Diagram
+
+![Enterprise Architecture Diagram](./images/enterprise-architecture-diagram.png)
+
+<details>
+<summary>View Mermaid source</summary>
+
 
 ```mermaid
 graph TD
@@ -37,7 +42,8 @@ graph TD
     VNet --> Subnet
     Subnet --> VM
     NSG --> Subnet
-  ```
+```
+</details>
 
 
 ## Tech Stack
