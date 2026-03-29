@@ -27,6 +27,7 @@ resource "azurerm_subnet" "internal" {
 # 3. Security Layer: NSG & Public IP
 # ==========================================
 # Zero Trust: Port 22 (SSH) のみを許可する厳格なルール
+
 resource "azurerm_network_security_group" "nsg" {
   name                = "nsg-web-prod"
   location            = azurerm_resource_group.example.location
@@ -40,6 +41,19 @@ resource "azurerm_network_security_group" "nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  # --- 【add】Webサイト閲覧用のHTTPルール ---
+  security_rule {
+    name                       = "AllowHTTP"
+    priority                   = 110          # SSH(100)の次くらいの数字に設定
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "80"         # HTTPは80番
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -103,4 +117,14 @@ resource "azurerm_linux_virtual_machine" "vm" {
     sku       = "22_04-lts"
     version   = "latest"
   }
+
+# ここを追加！
+  user_data = base64encode(<<-EOF
+              #!/bin/bash
+              sudo apt-get update
+              sudo apt-get install -y nginx
+              sudo systemctl start nginx
+              sudo systemctl enable nginx
+              EOF
+  )
 }
