@@ -21,7 +21,8 @@ Current deployment state:
 
 ## Enterprise Architecture Diagram
 
-![Enterprise Architecture Diagram](./images/enterprise-architecture-diagram.png)
+![Enterprise Architecture Diagram](./enterprise-architecture-diagram.png)
+
 
 <details>
 <summary>View Mermaid source</summary>
