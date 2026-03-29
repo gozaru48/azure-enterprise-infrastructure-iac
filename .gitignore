@@ -24,3 +24,17 @@ terraform.exe
 # Some teams commit this, but for personal learning portfolios, 
 # it's often cleaner to exclude it.
 .terraform.lock.hcl
+
+# Terraform local state and backups
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tfvars
+*.tfvars.json
+
+# Terraform crash logs
+crash.log
+
+# CLI configuration files
+.terraformrc
+terraform.rc
