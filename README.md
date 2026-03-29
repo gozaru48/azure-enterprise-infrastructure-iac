@@ -38,6 +38,7 @@ graph TD
     VNet --> Subnet
     Subnet --> VM
     NSG --> Subnet
+  
 ```
 
 
