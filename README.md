@@ -3,17 +3,17 @@
 [![Terraform](https://img.shields.io/badge/Terraform-1.0+-623CE4.svg?style=flat&logo=terraform)](https://www.terraform.io/)
 [![Azure](https://img.shields.io/badge/Azure-Cloud-0089D6.svg?style=flat&logo=microsoft-azure)](https://azure.microsoft.com/)
 
-## 🚀 Strategic Objective
+## Strategic Objective
 This repository demonstrates a **Production-Ready** cloud infrastructure deployment on Microsoft Azure using Terraform. 
 As an Azure specialist with 10 years of experience and **AZ-305/AZ-500** principles, I designed this project to showcase best practices in Infrastructure as Code (IaC), focusing on **Security, Scalability, and Automation.**
 
-## 🏗 Infrastructure Components (Step-by-Step Evolution)
+## Infrastructure Components (Step-by-Step Evolution)
 Current deployment state:
 1. **Management Layer**: **[Completed]** Automated Resource Group creation for logical isolation.
 2. **Network Layer**: **[Completed]** VNet and Subnet design with strict NSG rules to enforce Zero Trust.
 3. **Compute Layer**: (Planned) Hardened Linux VM deployment for secure application hosting.
 
-## 🛡️ Architectural Excellence (AZ-305 & AZ-500 Principles)
+## Architectural Excellence (AZ-305 & AZ-500 Principles)
 - **Zero Trust Networking**: Implementing strict Network Security Groups (NSG) to enforce the principle of least privilege (Port 22 restricted).
 - **Modular & Scalable**: Decoupled resource definitions using Terraform for future-proof growth.
 - **Resource Governance**: Automated resource management in Australia East region to optimize compliance and visibility.
@@ -25,7 +25,7 @@ Current deployment state:
 - **Deployment**: Local execution with Azure CLI / Git-based workflow
 
 ## How to Deploy
-1. **Login*: `az login`
+1. **Login**: `az login`
 2. **Initialize**: `terraform init`
 3. **Validate**: `terraform plan`
 4. **Deploy**: `terraform apply -auto-approve`
