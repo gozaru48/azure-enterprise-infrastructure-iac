@@ -7,37 +7,44 @@
 ## Strategic Objective
 Designed and implemented a **production-ready Azure enterprise infrastructure** using Terraform. This project demonstrates high-availability architecture, Zero Trust security, and the ability to handle real-world cloud deployment challenges, such as regional capacity constraints and SKU optimization.
 
-## Infrastructure Components (Step-by-Step Evolution)
-Current deployment state:
-1. **Management Layer**: **[Completed]** Automated Resource Group creation for logical isolation.
-2. **Network Layer**: **[Completed]** VNet and Subnet design with strict NSG rules to enforce Zero Trust.
-3. **Compute Layer**: (Planned) Hardened Linux VM deployment for secure application hosting.
+## Infrastructure Components (Fully Implemented)
+The environment is successfully deployed and verified in the **Southeast Asia (Singapore)** region, ensuring robust resource availability and low latency.
+
+1. **Management Layer**: **[Completed]** Automated Resource Group creation (`rg-enterprise-prod`) for logical isolation and lifecycle management.
+2. **Network Layer**: **[Completed]** VNet and Subnet design incorporating **Standard SKU Public IP** for enterprise-grade reliability and security features.
+3. **Security Layer**: **[Completed]** Strict **Network Security Groups (NSG)** enforcing a Zero Trust model. Inbound traffic is restricted to SSH (Port 22) using **SSH Key-based Authentication**.
+4. **Compute Layer**: **[Completed]** Hardened **Ubuntu 22.04 LTS** instance using **Standard_D2s_v3**, optimized for performance and stability in enterprise workloads.
 
 ## Architectural Excellence (AZ-305 & AZ-500 Principles)
-- **Zero Trust Networking**: Implementing strict Network Security Groups (NSG) to enforce the principle of least privilege (Port 22 restricted).
-- **Modular & Scalable**: Decoupled resource definitions using Terraform for future-proof growth.
-- **Resource Governance**: Automated resource management in Australia East region to optimize compliance and visibility.
-- **Network Security Group (NSG)**: Controls inbound/outbound traffic to enforce Zero Trust security model.
+- **Resilient Infrastructure**: Successfully navigated regional capacity limits by strategically migrating deployment from Australia East to **Southeast Asia**, showcasing adaptive cloud resource management.
+- **Zero Trust Networking**: Implemented strict NSGs to enforce the principle of least privilege, ensuring "Security by Design."
+- **Enterprise Standards**: Utilized **Standard SKU IPs** and **SSH Key Auth**, aligning with the Azure Security Benchmark and professional compliance standards.
+- **Modular & Scalable**: Decoupled resource definitions using Terraform for future-proof growth and maintainability.
 
 ## Enterprise Architecture Diagram
 ![Enterprise Architecture Diagram](./enterprise-architecture-diagram.png)
 
+*(Architecture includes: VNet, Subnet, NSG, Standard Public IP, and D2s_v3 Virtual Machine)*
+
 ## Tech Stack
 - **Cloud Provider**: Microsoft Azure
 - **IaC Tool**: Terraform (HCL)
-- **Security Framework**: Azure Security Benchmark
+- **OS**: Ubuntu 22.04 LTS
+- **Security Framework**: SSH Key-based (Passwordless)
 - **Deployment**: Local execution with Azure CLI / Git-based workflow
 
 ## How to Deploy
-1. **Login**: `az login`
-2. **Initialize**: `terraform init`
-3. **Validate**: `terraform plan`
-4. **Deploy**: `terraform apply -auto-approve`
-
+1. **Initialize**: `.\terraform init`
+2. **Validate**: `.\terraform plan`
+3. **Deploy**: `.\terraform apply -auto-approve`
+4. **Access**: `ssh -i ~/.ssh/id_rsa azureuser@<Public_IP>`
 
 ## Why This Project?
-In real-world enterprise environments, infrastructure provisioning is often inconsistent, manually managed, and prone to configuration drift. This leads to security risks, operational inefficiencies, and scalability limitations.
-Based on my experience in cloud operations and support, I designed this project to address these challenges by implementing Infrastructure as Code (IaC) using Terraform on Azure.
+In real-world enterprise environments, manual provisioning is inconsistent and prone to configuration drift. This project addresses these challenges by:
+- **Automating** deployment to ensure 100% consistency across environments.
+- **Enforcing** security best practices from the start, reducing the attack surface.
+- **Demonstrating Troubleshooting Skills**: Successfully resolved regional resource constraints and SKU compatibility issues during the deployment phase.
+
 
 This project focuses on:
 - Standardizing infrastructure deployment using reusable and modular Terraform code  
