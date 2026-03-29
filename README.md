@@ -46,6 +46,7 @@ This project focuses on:
 
 The goal is to demonstrate how enterprise-grade cloud environments can be built in a secure, consistent, and scalable way using modern DevOps practices.
 
+This approach reflects my experience in enterprise IT environments, where reliability, security, and operational efficiency are critical.
 
 ### What Problem Does This Solve?
 Manual infrastructure provisioning is error-prone, time-consuming, and difficult to scale. 
