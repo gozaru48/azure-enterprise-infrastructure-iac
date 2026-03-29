@@ -2,11 +2,10 @@
 
 [![Terraform](https://img.shields.io/badge/Terraform-1.0+-623CE4.svg?style=flat&logo=terraform)](https://www.terraform.io/)
 [![Azure](https://img.shields.io/badge/Azure-Cloud-0089D6.svg?style=flat&logo=microsoft-azure)](https://azure.microsoft.com/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420.svg?style=flat&logo=ubuntu)](https://ubuntu.com/)
 
 ## Strategic Objective
-Designed and implemented a production-ready Azure enterprise infrastructure using Terraform, focusing on security (Zero Trust), scalability, and automated deployment workflows.
-This project showcases enterprise-grade Infrastructure as Code (IaC) aligned with Azure best practices, highlighting secure and scalable cloud architecture design.
-
+Designed and implemented a **production-ready Azure enterprise infrastructure** using Terraform. This project demonstrates high-availability architecture, Zero Trust security, and the ability to handle real-world cloud deployment challenges, such as regional capacity constraints and SKU optimization.
 
 ## Infrastructure Components (Step-by-Step Evolution)
 Current deployment state:
