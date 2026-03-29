@@ -20,32 +20,7 @@ Current deployment state:
 - **Network Security Group (NSG)**: Controls inbound/outbound traffic to enforce Zero Trust security model.
 
 ## Enterprise Architecture Diagram
-
 ![Enterprise Architecture Diagram](./enterprise-architecture-diagram.png)
-
-
-<details>
-<summary>View Mermaid source</summary>
-
-
-```mermaid
-graph TD
-    Internet((Internet))
-
-    subgraph Azure_Cloud
-        VNet[vnet-enterprise-prod]
-        Subnet[snet-internal]
-        NSG[nsg-web-prod]
-        VM[Linux VM]
-    end
-
-    Internet --> NSG
-    VNet --> Subnet
-    Subnet --> VM
-    NSG --> Subnet
-```
-</details>
-
 
 ## Tech Stack
 - **Cloud Provider**: Microsoft Azure
@@ -59,7 +34,19 @@ graph TD
 3. **Validate**: `terraform plan`
 4. **Deploy**: `terraform apply -auto-approve`
 
+
 ## Why This Project?
+In real-world enterprise environments, infrastructure provisioning is often inconsistent, manually managed, and prone to configuration drift. This leads to security risks, operational inefficiencies, and scalability limitations.
+Based on my experience in cloud operations and support, I designed this project to address these challenges by implementing Infrastructure as Code (IaC) using Terraform on Azure.
+
+This project focuses on:
+- Standardizing infrastructure deployment using reusable and modular Terraform code  
+- Enforcing security best practices using Network Security Groups (NSG) aligned with Zero Trust principles  
+- Improving scalability and maintainability through automated and version-controlled deployments  
+
+The goal is to demonstrate how enterprise-grade cloud environments can be built in a secure, consistent, and scalable way using modern DevOps practices.
+
+
 ### What Problem Does This Solve?
 Manual infrastructure provisioning is error-prone, time-consuming, and difficult to scale. 
 This project solves these challenges by:
