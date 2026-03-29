@@ -64,6 +64,15 @@ This project solves these challenges by:
 - **Enforcing** security best practices from the start (Security by Design).
 - **Providing** a clear, reusable blueprint for enterprise-level cloud adoption.
 
+
+### Update (2026-03-29):
+
+- **Automated Provisioning**: Integrated user_data to automate Nginx installation on Ubuntu 22.04 LTS.
+
+- **Security**: Verified HTTP (Port 80) access via NSG rules, maintaining a Zero Trust approach for SSH.
+
+- **Deployment Method**: Successfully performed "Destroy and Recreate" (Immutable Infrastructure) using terraform apply -replace.
+
 ---
 **Contact**: Based in Malaysia and open to Cloud Engineer opportunities, including roles in Australia with visa sponsorship. Experienced in building secure and scalable cloud environments using IaC.
 
