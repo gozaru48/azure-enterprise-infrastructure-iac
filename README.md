@@ -18,6 +18,30 @@ Current deployment state:
 - **Modular & Scalable**: Decoupled resource definitions using Terraform for future-proof growth.
 - **Resource Governance**: Automated resource management in Australia East region to optimize compliance and visibility.
 
+### # Architecture Diagram
+
+
+## Infrastructure Diagram
+
+```mermaid
+graph TD
+    Internet((Internet))
+
+    subgraph Azure_Cloud
+        VNet[vnet-enterprise-prod]
+        Subnet[snet-internal]
+        NSG[nsg-web-prod]
+        VM[Linux VM]
+    end
+
+    Internet --> NSG
+    VNet --> Subnet
+    Subnet --> VM
+    NSG --> Subnet
+```
+
+
+
 ## 🛠 Tech Stack
 - **Cloud Provider**: Microsoft Azure
 - **IaC Tool**: Terraform (HCL)
