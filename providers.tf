@@ -1,6 +1,3 @@
-# Configure the Azure Provider
-# This block tells Terraform which cloud and version to use.
-
 terraform {
   required_providers {
     azurerm = {
@@ -10,10 +7,12 @@ terraform {
   }
 }
 
-
 provider "azurerm" {
-  features {}
-
-  # これを追加：古い認証方式との互換性を保つため
+  features {
+    resource_group {
+      # リソースが残っていてもRGごと削除を許可する設定（検証効率化）
+      prevent_deletion_if_contains_resources = false
+    }
+  }
   storage_use_azuread = false
 }
