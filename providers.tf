@@ -10,6 +10,10 @@ terraform {
   }
 }
 
+
 provider "azurerm" {
   features {}
+
+  # これを追加：古い認証方式との互換性を保つため
+  storage_use_azuread = false
 }
