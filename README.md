@@ -5,7 +5,9 @@
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420.svg?style=flat&logo=ubuntu)](https://ubuntu.com/)
 
 ## Strategic Objective
-Designed and implemented a **production-ready Azure enterprise infrastructure** using Terraform. This project demonstrates high-availability architecture, Zero Trust security, and the ability to handle real-world cloud deployment challenges, such as regional capacity constraints and SKU optimization.
+Built as part of my Terraform Associate preparation, this project simulates a real-world enterprise Azure environment.
+
+It demonstrates the design and implementation of production-ready infrastructure using Terraform, with a focus on Zero Trust security and solving practical deployment challenges such as regional capacity constraints and SKU optimization.
 
 ## Infrastructure Components (Fully Implemented)
 The environment is successfully deployed and verified in the **Southeast Asia (Singapore)** region, ensuring robust resource availability and low latency.
