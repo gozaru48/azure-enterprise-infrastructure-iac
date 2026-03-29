@@ -17,11 +17,10 @@ Current deployment state:
 - **Zero Trust Networking**: Implementing strict Network Security Groups (NSG) to enforce the principle of least privilege (Port 22 restricted).
 - **Modular & Scalable**: Decoupled resource definitions using Terraform for future-proof growth.
 - **Resource Governance**: Automated resource management in Australia East region to optimize compliance and visibility.
+- **Network Security Group (NSG)**: Controls inbound/outbound traffic to enforce Zero Trust security model.
 
-### # Architecture Diagram
 
-
-## Infrastructure Diagram
+## Enterprise Architecture Diagram
 
 ```mermaid
 graph TD
@@ -38,12 +37,10 @@ graph TD
     VNet --> Subnet
     Subnet --> VM
     NSG --> Subnet
-  
-```
+  ```
 
 
-
-## 🛠 Tech Stack
+## Tech Stack
 - **Cloud Provider**: Microsoft Azure
 - **IaC Tool**: Terraform (HCL)
 - **Security Framework**: Azure Security Benchmark
