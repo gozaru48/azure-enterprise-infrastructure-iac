@@ -4,8 +4,9 @@
 [![Azure](https://img.shields.io/badge/Azure-Cloud-0089D6.svg?style=flat&logo=microsoft-azure)](https://azure.microsoft.com/)
 
 ## Strategic Objective
-This repository demonstrates a **Production-Ready** cloud infrastructure deployment on Microsoft Azure using Terraform. 
-As an Azure specialist with 10 years of experience and **AZ-305/AZ-500** principles, I designed this project to showcase best practices in Infrastructure as Code (IaC), focusing on **Security, Scalability, and Automation.**
+Designed and implemented a production-ready Azure enterprise infrastructure using Terraform, focusing on security (Zero Trust), scalability, and automated deployment workflows.
+This project showcases enterprise-grade Infrastructure as Code (IaC) aligned with Azure best practices, highlighting secure and scalable cloud architecture design.
+
 
 ## Infrastructure Components (Step-by-Step Evolution)
 Current deployment state:
