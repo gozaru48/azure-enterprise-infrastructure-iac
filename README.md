@@ -40,20 +40,20 @@ The environment is successfully deployed and verified in the **Southeast Asia (S
 4. **Access**: `ssh -i ~/.ssh/id_rsa azureuser@<Public_IP>`
 
 ## Why This Project?
-In real-world enterprise environments, manual provisioning is inconsistent and prone to configuration drift. This project addresses these challenges by:
-- **Automating** deployment to ensure 100% consistency across environments.
-- **Enforcing** security best practices from the start, reducing the attack surface.
-- **Demonstrating Troubleshooting Skills**: Successfully resolved regional resource constraints and SKU compatibility issues during the deployment phase.
 
+In many enterprise environments, infrastructure is still manually configured, leading to inconsistencies, security risks, and operational inefficiencies.
 
-This project focuses on:
-- Standardizing infrastructure deployment using reusable and modular Terraform code  
-- Enforcing security best practices using Network Security Groups (NSG) aligned with Zero Trust principles  
-- Improving scalability and maintainability through automated and version-controlled deployments  
+To address these challenges, I built this project using Terraform to:
 
-The goal is to demonstrate how enterprise-grade cloud environments can be built in a secure, consistent, and scalable way using modern DevOps practices.
+- Automate infrastructure deployment for consistency and reproducibility
+- Enforce security best practices based on Zero Trust principles
+- Solve real-world cloud issues such as regional capacity constraints and SKU compatibility
 
-This approach reflects my experience in enterprise IT environments, where reliability, security, and operational efficiency are critical.
+This project represents my transition from support-level operations to cloud engineering, with a focus on automation, security, and scalable architecture.
+
+It demonstrates how modern enterprise cloud environments should be built: secure, consistent, and fully reproducible using Infrastructure as Code.
+
+This project showcases a practical implementation of secure and scalable Azure infrastructure using Terraform.
 
 ### What Problem Does This Solve?
 Manual infrastructure provisioning is error-prone, time-consuming, and difficult to scale. 
@@ -63,5 +63,11 @@ This project solves these challenges by:
 - **Providing** a clear, reusable blueprint for enterprise-level cloud adoption.
 
 ---
-**Contact**: Currently based in Malaysia, actively seeking Cloud Engineer opportunities in Australia with Visa Sponsorship. 
-I bring a proven track record of reducing cloud costs and security risks through automated IaC workflows.
+**Contact**: Based in Malaysia and open to Cloud Engineer opportunities, including roles in Australia with visa sponsorship. Experienced in building secure and scalable cloud environments using IaC.
+
+Key Skills Demonstrated:
+- Infrastructure as Code (Terraform)
+- Azure Networking (VNet, Subnet, NSG)
+- Cloud Security (Zero Trust, SSH restriction)
+- Troubleshooting (Region/SKU issues)
+- Git-based workflow
