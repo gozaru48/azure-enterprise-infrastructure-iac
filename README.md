@@ -9,19 +9,23 @@ Built as part of my Terraform Associate preparation, this project simulates a re
 
 It demonstrates the design and implementation of production-ready infrastructure using Terraform, with a focus on Zero Trust security and solving practical deployment challenges such as regional capacity constraints and SKU optimization.
 
-## Infrastructure Components (Fully Implemented)
+## 1. Infrastructure Components (Fully Implemented)
 The environment is successfully deployed and verified in the **Southeast Asia (Singapore)** region, ensuring robust resource availability and low latency.
 
 1. **Management Layer**: **[Completed]** Automated Resource Group creation (`rg-enterprise-prod`) for logical isolation and lifecycle management.
 2. **Network Layer**: **[Completed]** VNet and Subnet design incorporating **Standard SKU Public IP** for enterprise-grade reliability and security features.
 3. **Security Layer**: **[Completed]** Strict **Network Security Groups (NSG)** enforcing a Zero Trust model. Inbound traffic is restricted to SSH (Port 22) using **SSH Key-based Authentication**.
 4. **Compute Layer**: **[Completed]** Hardened **Ubuntu 22.04 LTS** instance using **Standard_D2s_v3**, optimized for performance and stability in enterprise workloads.
+5. **Monitoring Layer**: [Completed] Integrated Azure Monitor with Metric Alerts to track CPU usage. Configured an Action Group for automated email notifications.
+6. **State Management**: [Completed] Secured infrastructure lifecycle using a Remote Backend (Azure Blob Storage) with state locking to prevent concurrency issues.
 
 ## Architectural Excellence (AZ-305 & AZ-500 Principles)
 - **Resilient Infrastructure**: Successfully navigated regional capacity limits by strategically migrating deployment from Australia East to **Southeast Asia**, showcasing adaptive cloud resource management.
 - **Zero Trust Networking**: Implemented strict NSGs to enforce the principle of least privilege, ensuring "Security by Design."
 - **Enterprise Standards**: Utilized **Standard SKU IPs** and **SSH Key Auth**, aligning with the Azure Security Benchmark and professional compliance standards.
 - **Modular & Scalable**: Decoupled resource definitions using Terraform for future-proof growth and maintainability.
+- **Automated Observability**: Implemented "Monitoring as Code" to ensure every deployed resource is immediately under surveillance, aligning with enterprise operational standards.
+- **State Security & Consistency**: Migrated from local to remote state management, ensuring a "Single Source of Truth" and enabling safe collaboration within a team environment.
 
 ## Enterprise Architecture Diagram
 ![Enterprise Architecture Diagram](./enterprise-architecture-diagram.png)
@@ -72,6 +76,16 @@ This project solves these challenges by:
 - **Security**: Verified HTTP (Port 80) access via NSG rules, maintaining a Zero Trust approach for SSH.
 
 - **Deployment Method**: Successfully performed "Destroy and Recreate" (Immutable Infrastructure) using terraform apply -replace.
+
+### Update (2026-04-03):
+
+- **Full Observability**: Deployed
+  azurerm_monitor_metric_alert to trigger alerts at 80% CPU utilization.
+
+- **Advanced Dependency Management**: Resolved resource race conditions during parallel deployment by implementing explicit depends_on blocks for monitoring resources.
+
+- **Enterprise State Locking**: Successfully migrated to Azure Storage Backend, ensuring robust state management.
+
 
 ---
 **Contact**: Based in Malaysia and open to Cloud Engineer opportunities, including roles in Australia with visa sponsorship. Experienced in building secure and scalable cloud environments using IaC.
