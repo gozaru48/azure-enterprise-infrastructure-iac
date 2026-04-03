@@ -46,7 +46,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     version   = "latest"
   }
 
-  user_data = base64encode(<<-EOF
+  custom_data = base64encode(<<-EOF
               #!/bin/bash
               sudo apt-get update
               sudo apt-get install -y nginx
@@ -54,4 +54,38 @@ resource "azurerm_linux_virtual_machine" "vm" {
               sudo systemctl enable nginx
               EOF
   )
+}
+
+#3. 通知先の設定（Action Group）
+resource "azurerm_monitor_action_group" "main" {
+  name                = "CriticalAlerts"
+  resource_group_name = var.resource_group_name
+  short_name          = "prio1"
+
+  depends_on = [azurerm_linux_virtual_machine.vm]
+
+  email_receiver {
+    name          = "admin"
+    email_address = "your-email@example.com" # 自分のアドレスに変更
+  }
+}
+
+#4. CPU 80% 監視アラート
+resource "azurerm_monitor_metric_alert" "cpu_alert" {
+  name                = "vm-cpu-alert"
+  resource_group_name = var.resource_group_name
+  scopes              = [azurerm_linux_virtual_machine.vm.id] # VMのIDを参照
+  description         = "Action will be triggered when CPU percentage is greater than 80."
+
+  criteria {
+    metric_namespace = "Microsoft.Compute/virtualMachines"
+    metric_name      = "Percentage CPU"
+    aggregation      = "Average"
+    operator         = "GreaterThan"
+    threshold        = 80
+  }
+
+  action {
+    action_group_id = azurerm_monitor_action_group.main.id
+  }
 }

@@ -9,7 +9,7 @@ Built as part of my Terraform Associate preparation, this project simulates a re
 
 It demonstrates the design and implementation of production-ready infrastructure using Terraform, with a focus on Zero Trust security and solving practical deployment challenges such as regional capacity constraints and SKU optimization.
 
-## 1. Infrastructure Components (Fully Implemented)
+## Infrastructure Components (Fully Implemented)
 The environment is successfully deployed and verified in the **Southeast Asia (Singapore)** region, ensuring robust resource availability and low latency.
 
 1. **Management Layer**: **[Completed]** Automated Resource Group creation (`rg-enterprise-prod`) for logical isolation and lifecycle management.
@@ -77,7 +77,7 @@ This project solves these challenges by:
 
 - **Deployment Method**: Successfully performed "Destroy and Recreate" (Immutable Infrastructure) using terraform apply -replace.
 
-### Update (2026-04-03):
+### Update (2026-04-03): test test
 
 - **Full Observability**: Deployed
   azurerm_monitor_metric_alert to trigger alerts at 80% CPU utilization.
