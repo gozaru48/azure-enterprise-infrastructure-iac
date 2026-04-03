@@ -77,7 +77,7 @@ This project solves these challenges by:
 
 - **Deployment Method**: Successfully performed "Destroy and Recreate" (Immutable Infrastructure) using terraform apply -replace.
 
-### Update (2026-04-03): test test
+### Update (2026-04-04): 
 
 - **Full Observability**: Deployed
   azurerm_monitor_metric_alert to trigger alerts at 80% CPU utilization.
