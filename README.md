@@ -1,4 +1,5 @@
 # Azure Enterprise-Grade Infrastructure with Terraform 2026
+Cloud Engineer focused on Terraform, Azure, and security-driven infrastructure design.
 Production-ready Azure infrastructure built with Terraform, demonstrating real-world enterprise practices including remote state management, monitoring, and zero-trust security architecture.
 
 [![Terraform](https://img.shields.io/badge/Terraform-1.0+-623CE4.svg?style=flat&logo=terraform)](https://www.terraform.io/)
@@ -24,7 +25,7 @@ The environment is successfully deployed and verified in the **Southeast Asia (S
 2. **Network Layer**: **[Completed]** VNet and Subnet design incorporating **Standard SKU Public IP** for enterprise-grade reliability and security features.
 3. **Security Layer**: **[Completed]** Strict **Network Security Groups (NSG)** enforcing a Zero Trust model. Inbound traffic is restricted to SSH (Port 22) using **SSH Key-based Authentication**.
 4. **Compute Layer**: **[Completed]** Hardened **Ubuntu 22.04 LTS** instance using **Standard_D2s_v3**, optimized for performance and stability in enterprise workloads.
-5. **Monitoring Layer**: [Completed] Integrated Azure Monitor with Metric Alerts to track CPU usage. Configured an Action Group for automated email notifications.
+5. **Monitoring Layer**: [Completed] Integrated Azure Monitor with Metric Alerts to track CPU usage. Configured an Action Group for automated email notifications, enabling proactive incident detection through automated alerts.
 6. **State Management**: [Completed] Secured infrastructure lifecycle using a Remote Backend (Azure Blob Storage) with state locking to prevent concurrency issues.
 
 ## Architectural Excellence (AZ-305 & AZ-500 Principles)
@@ -79,6 +80,7 @@ This project solves these challenges by:
 - **Automating** deployment to ensure consistency across environments.
 - **Enforcing** security best practices from the start (Security by Design).
 - **Providing** a clear, reusable blueprint for enterprise-level cloud adoption.
+- This project also involved troubleshooting and resolving real-world issues such as regional capacity constraints and resource dependency conflicts during deployment.
 
 
 ### Update (2026-03-29):
