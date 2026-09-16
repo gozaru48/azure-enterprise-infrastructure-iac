@@ -7,8 +7,8 @@ production-oriented Azure infrastructure built with Terraform, demonstrating rea
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420.svg?style=flat&logo=ubuntu)](https://ubuntu.com/)
 
 ## Business Impact
-- Reduced manual infrastructure setup effort by approximately 90% through Terraform automation
-- Eliminated configuration drift and improved deployment consistency across environments
+- Automated repetitive infrastructure provisioning with Terraform
+- Reduced the risk of configuration drift through IaC
 - Enabled team-based infrastructure management using remote state (Azure Blob Storage)
 - Improved operational visibility with proactive monitoring (CPU alerts at 80%)
 - Designed infrastructure aligned with enterprise-level Zero Trust security standards
@@ -23,7 +23,7 @@ The environment is successfully deployed and verified in the **Southeast Asia (S
 
 1. **Management Layer**: **[Completed]** Automated Resource Group creation (`rg-enterprise-prod`) for logical isolation and lifecycle management.
 2. **Network Layer**: **[Completed]** VNet and Subnet design incorporating **Standard SKU Public IP** for enterprise-grade reliability and security features.
-3. **Security Layer**: **[Completed]** Strict **Network Security Groups (NSG)** enforcing a Zero Trust model. Inbound traffic is restricted to SSH (Port 22) using **SSH Key-based Authentication**.
+3. **Security Layer**: **[Completed]** Strict **Network Security Groups (NSG)** enforcing a Zero Trust-inspired security principles. Inbound traffic is restricted to SSH (Port 22) using **SSH Key-based Authentication**.
 4. **Compute Layer**: **[Completed]** Hardened **Ubuntu 22.04 LTS** instance using **Standard_D2s_v3**, optimized for performance and stability in enterprise workloads.
 5. **Monitoring Layer**: [Completed] Integrated Azure Monitor with Metric Alerts to track CPU usage. Configured an Action Group for automated email notifications, enabling proactive incident detection through automated alerts.
 6. **State Management**: [Completed] Secured infrastructure lifecycle using a Remote Backend (Azure Blob Storage) with state locking to prevent concurrency issues.
