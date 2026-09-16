@@ -1,6 +1,6 @@
 # Azure Enterprise-Grade Infrastructure with Terraform 2026
 Cloud Engineer focused on Terraform, Azure, and security-driven infrastructure design.
-Production-ready Azure infrastructure built with Terraform, demonstrating real-world enterprise practices including remote state management, monitoring, and zero-trust security architecture.
+production-oriented Azure infrastructure built with Terraform, demonstrating real-world enterprise practices including remote state management, monitoring, and zero-trust security architecture.
 
 [![Terraform](https://img.shields.io/badge/Terraform-1.0+-623CE4.svg?style=flat&logo=terraform)](https://www.terraform.io/)
 [![Azure](https://img.shields.io/badge/Azure-Cloud-0089D6.svg?style=flat&logo=microsoft-azure)](https://azure.microsoft.com/)
@@ -16,7 +16,7 @@ Production-ready Azure infrastructure built with Terraform, demonstrating real-w
 ## Strategic Objective
 This project simulates a real-world enterprise Azure environment as part of my Terraform Associate preparation.
 
-It focuses on building production-ready infrastructure with Terraform, applying Zero Trust security principles, and solving real deployment challenges such as regional capacity constraints and SKU optimization.
+It focuses on building production-oriented infrastructure with Terraform, applying Zero Trust security principles, and solving real deployment challenges such as regional capacity constraints and SKU optimization.
 
 ## Infrastructure Components (Fully Implemented)
 The environment is successfully deployed and verified in the **Southeast Asia (Singapore)** region, ensuring robust resource availability and low latency.
@@ -39,7 +39,7 @@ The environment is successfully deployed and verified in the **Southeast Asia (S
 ## Enterprise Architecture Diagram
 ![Enterprise Architecture Diagram](./enterprise-architecture-diagram.png)
 
-This architecture represents a production-ready environment:
+This architecture represents a production-oriented environment:
 - Public IP for external access
 - NSG for traffic filtering
 - VM deployed in a secured subnet
