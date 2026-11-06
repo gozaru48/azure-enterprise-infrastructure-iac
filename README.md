@@ -109,5 +109,5 @@ This project solves these challenges by:
 - Applied AZ-500 security principles to ensure enterprise-grade security and compliance
 
 ---
-**Contact**: Based in Malaysia and actively seeking Cloud Engineer opportunities, including roles in Australia with visa sponsorship.
+**Contact**: Based in Malaysia and actively seeking Cloud Engineer opportunities.
 I bring hands-on experience in designing and deploying secure, scalable cloud infrastructure using Terraform and Azure.
